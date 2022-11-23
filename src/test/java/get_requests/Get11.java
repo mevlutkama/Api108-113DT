@@ -18,6 +18,8 @@ public class Get11 extends GoRestBaseUrl {
        When
            User send GET Request
        Then
+            Status Code should be 200
+       And
            The value of "pagination limit" is 10
        And
            The "current link" should be "https://gorest.co.in/public/v1/users?page=1"
@@ -26,7 +28,7 @@ public class Get11 extends GoRestBaseUrl {
        And
            We have at least one "active" status
        And
-           "Fr. Ekaaksh Khanna", "Ganak Namboothiri", "Chaitan Chaturvedi" are among the users
+           "Tej Bhattacharya", "Pres. Harit Chaturvedi", "Manisha Marar" are among the users
        And
            The female users are less than or equal to male users
     */
@@ -51,7 +53,7 @@ public class Get11 extends GoRestBaseUrl {
                         "meta.pagination.links.current",equalTo("https://gorest.co.in/public/v1/users?page=1"),
                         "data.name", hasSize(10),
                         "data.status", hasItem("active"),
-                        "data.name", hasItems("Fr. Ekaaksh Khanna","Ganak Namboothiri","Chaitan Chaturvedi"));
+                        "data.name", hasItems("Tej Bhattacharya", "Pres. Harit Chaturvedi", "Manisha Marar"));
 
         // The female users are less than or equal to male users
         // I will compare number of female and male users
@@ -68,7 +70,7 @@ public class Get11 extends GoRestBaseUrl {
         }
         System.out.println("numOfFemales: " + numOfFemales);
         int numOfMales = genders.size() - numOfFemales;
-        assertTrue(numOfFemales >= numOfMales);
+        assertTrue(numOfFemales <= numOfMales);
 
         // 2.Way: I will get all females by using Groovy Language then compare it with males
         List<String> femaleList = jsonPath.getList("data.findAll{it.gender=='female'}.gender");
@@ -77,6 +79,6 @@ public class Get11 extends GoRestBaseUrl {
         List<String> maleList = jsonPath.getList("data.findAll{it.gender=='male'}.gender");
         System.out.println("maleList: " + maleList);
 
-        assertTrue(femaleList.size() >= maleList.size());
+        assertTrue(femaleList.size() <= maleList.size());
     }
 }

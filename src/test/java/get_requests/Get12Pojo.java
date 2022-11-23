@@ -12,34 +12,34 @@ import static org.junit.Assert.assertEquals;
 public class Get12Pojo extends HerOkuAppBaseUrl {
         /*
             Given
-                https://restful-booker.herokuapp.com/booking/6838
+                https://restful-booker.herokuapp.com/booking/12
             When
                 I send GET Request to the URL
             Then
                 Status code is 200
             And
                 Response body is like {
-                                    "firstname": "Sally",
-                                    "lastname": "Brown",
-                                    "totalprice": 111,
-                                    "depositpaid": true,
-                                    "bookingdates": {
-                                        "checkin": "2013-02-23",
-                                        "checkout": "2014-10-23"
-                                    },
-                                    "additionalneeds": "Breakfast"
-                                 }
+                                            "firstname": "Fabio",
+                                            "lastname": "Dominguez",
+                                            "totalprice": 111,
+                                            "depositpaid": true,
+                                            "bookingdates": {
+                                                "checkin": "2018-01-01",
+                                                "checkout": "2019-01-01"
+                                        },
+                                            "additionalneeds": "Breakfast"}
+
          */
 
     @Test
     public void get12(){
 
         // Set the Url
-        spec.pathParams("first","booking","second", 6838);
+        spec.pathParams("first","booking","second", 12);
 
         // Set the expected data
-        BookingDatesPojo bookingDatesPojo = new BookingDatesPojo("2013-02-23", "2014-10-23");
-        BookingPojo expectedData = new BookingPojo("Sally", "Brown", 111, true, bookingDatesPojo, "Breakfast");
+        BookingDatesPojo bookingDatesPojo = new BookingDatesPojo("2018-01-01", "2019-01-01");
+        BookingPojo expectedData = new BookingPojo("Fabio", "Dominguez", 111, true, bookingDatesPojo, "Breakfast");
         System.out.println("expectedData: " + expectedData);
 
         // Send the Request and get the Response
@@ -57,6 +57,11 @@ public class Get12Pojo extends HerOkuAppBaseUrl {
         assertEquals(expectedData.getDepositpaid(), actualData.getDepositpaid());
         assertEquals(expectedData.getAdditionalneeds(), actualData.getAdditionalneeds());
 
+        // 1.Way:
+        assertEquals(expectedData.getBookingdates().getCheckin(), actualData.getBookingdates().getCheckin());
+        assertEquals(expectedData.getBookingdates().getCheckout(), actualData.getBookingdates().getCheckout());
+
+        // 2.Way: Recommended
         assertEquals(bookingDatesPojo.getCheckin(), actualData.getBookingdates().getCheckin());
         assertEquals(bookingDatesPojo.getCheckout(), actualData.getBookingdates().getCheckout());
     }
