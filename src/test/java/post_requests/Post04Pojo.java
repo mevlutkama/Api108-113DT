@@ -33,7 +33,7 @@ public class Post04Pojo extends HerOkuAppBaseUrl {
  		    Status code is 200
  		And
  		    Response body is like {
- 		                            "bookingid": 16,
+ 		                            "bookingid": 252306,
  		                            "booking" :{
                                         "firstname": "Ali",
                                         "lastname": "Can",

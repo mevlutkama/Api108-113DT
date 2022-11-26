@@ -12,7 +12,7 @@ import static org.junit.Assert.assertEquals;
 public class Get13Pojo extends GoRestBaseUrl {
     /*
         Given
-            https://gorest.co.in/public/v1/users/125
+            https://gorest.co.in/public/v1/users/131
         When
             User send GET Request to the URL
         Then
@@ -20,24 +20,25 @@ public class Get13Pojo extends GoRestBaseUrl {
         And
             Response body should be like
                           {
-                            "meta": null,
-                            "data": {
-                                "id": 125,
-                                "name": "Ms. Amaresh Trivedi",
-                                "email": "ms_trivedi_amaresh@larson.co",
-                                "gender": "female",
-                                "status": "active"
+                                "meta": null,
+                                "data": {
+                                    "id": 131,
+                                    "name": "Prem Pilla",
+                                    "email": "pilla_prem@mueller.info",
+                                    "gender": "female",
+                                    "status": "active"
                             }
                             }
-    */
+        */
+
     @Test
     public void get13(){
 
         // Set the Url
-        spec.pathParams("first","users", "second",125);
+        spec.pathParams("first","users", "second",131);
 
         // Set the expected data
-        GoRestDataPojo goRestDataPojo = new GoRestDataPojo("Ms. Amaresh Trivedi", "ms_trivedi_amaresh@larson.co", "female", "active");
+        GoRestDataPojo goRestDataPojo = new GoRestDataPojo("Prem Pilla", "pilla_prem@mueller.info", "female", "active");
         GoRestPojo expectedData = new GoRestPojo(null,goRestDataPojo);
         System.out.println("expectedData = " + expectedData);
 

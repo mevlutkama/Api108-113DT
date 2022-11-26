@@ -53,7 +53,7 @@ public class Post02 extends HerOkuAppBaseUrl {
 
         // Set the expected data ==> Payload
         HerOkuAppTestData obj = new HerOkuAppTestData();
-        Map<String,String> bookingDatesMap = obj.bookingDatesMapSetUp("2021-09-09","2021-09-21");
+        Map<String,String> bookingDatesMap = obj.bookingdatesMapSetUp("2021-09-09","2021-09-21");
         Map<String,Object> expectedData = obj.expectedDataSetUp("John","Doe",11111,true,bookingDatesMap,"Breakfast");
         System.out.println("expectedData: " + expectedData);
 

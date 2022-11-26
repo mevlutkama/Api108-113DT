@@ -18,7 +18,7 @@ public class Put01 extends JsonPlaceHolderBaseUrl {
 	        1) https://jsonplaceholder.typicode.com/todos/198
 	        2) {
                  "userId": 21,
-                 "title": "Wash the dishes",
+                 "title": "Read the books",
                  "completed": false
                }
         When
@@ -27,7 +27,7 @@ public class Put01 extends JsonPlaceHolderBaseUrl {
 	   	   Status code is 200
 	   	   And response body is like   {
 									    "userId": 21,
-									    "title": "Wash the dishes",
+									    "title": "Read the books",
 									    "completed": false
 									   }
      */
@@ -38,7 +38,7 @@ public class Put01 extends JsonPlaceHolderBaseUrl {
 
         // Set the expected data
         JsonPlaceHolderTestData obj = new JsonPlaceHolderTestData();
-        Map<String,Object> expectedData = obj.expectedDataJPH(21,"Wash the dishes",false);
+        Map<String,Object> expectedData = obj.expectedDataJPH(21,"Read the books",false);
         System.out.println("expectedData = " + expectedData);
 
         // Send the Request and get the Response
@@ -46,7 +46,7 @@ public class Put01 extends JsonPlaceHolderBaseUrl {
         response.prettyPrint();
 
         // Do Assertion
-        Map<String,Object> actualData = response.as(HashMap.class);
+        Map<String,Object> actualData = response.as(HashMap.class);// De-Serialization
         System.out.println("actualData = " + actualData);
 
         assertEquals(200,response.statusCode());

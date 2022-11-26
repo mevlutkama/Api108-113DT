@@ -15,18 +15,18 @@ import static org.junit.Assert.assertEquals;
 
 public class Patch01 extends JsonPlaceHolderBaseUrl {
     /*
-      Given
-          1) https://jsonplaceholder.typicode.com/todos/198
-          2) {
-               "title": "Read the books"
-             }
-      When
-           I send PATCH Request to the Url
-      Then
-            Status code is 200
-            And response body is like   {
+            Given
+                1) https://jsonplaceholder.typicode.com/todos/198
+                2) {
+                    "title": "Do your Homework"
+                    }
+            When
+                    I send PATCH Request to the Url
+            Then
+                    Status code is 200
+                    And response body is like   {
                                       "userId": 10,
-                                      "title": "Read the books",
+                                      "title": "Do your Homework",
                                       "completed": true,
                                       "id": 198
                                      }
@@ -39,7 +39,7 @@ public class Patch01 extends JsonPlaceHolderBaseUrl {
 
         // Set the expected data
         JsonPlaceHolderTestData obj = new JsonPlaceHolderTestData();
-        Map<String,Object> expectedData = obj.expectedDataJPH(null,"Read the books", null);
+        Map<String,Object> expectedData = obj.expectedDataJPH(null,"Do your Homework", null);
         System.out.println("expectedData = " + expectedData);
 
         // Send the Request and the get the Response

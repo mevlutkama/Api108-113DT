@@ -1,6 +1,6 @@
 package get_requests;
 
-import base_urls.RegresBaseUrl;
+import base_urls.ReqresBaseUrl;
 import io.restassured.response.Response;
 import org.junit.Test;
 
@@ -9,7 +9,7 @@ import java.util.HashMap;
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
 
-public class Get14 extends RegresBaseUrl {
+public class Get14 extends ReqresBaseUrl {
     /*
        Given
            https://reqres.in/api/users/23
