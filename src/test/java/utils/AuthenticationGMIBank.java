@@ -9,6 +9,9 @@ import java.util.Map;
 import static io.restassured.RestAssured.given;
 
 public class AuthenticationGMIBank {
+    public static void main(String[] args) {
+        System.out.println(generateToken());
+    }
 
     public static String generateToken(){
         Map<String,Object> map = new HashMap<>();

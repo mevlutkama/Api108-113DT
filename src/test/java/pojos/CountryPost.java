@@ -3,9 +3,9 @@ package pojos;
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 
 import java.util.ArrayList;
+
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class CountryPost {
-
     private String name;
     private ArrayList<States> states;
 

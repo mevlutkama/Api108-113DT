@@ -9,6 +9,6 @@ public class GMIBankBaseUrl {
 
     @Before// If you use @Before annotation at the top of the method, it will work just before every test method.
     public void setUp() {
-        spec = new RequestSpecBuilder().setBaseUri("http://www.gmibank.com//api/").build();
+        spec = new RequestSpecBuilder().setBaseUri("https://www.gmibank.com/api/").build();
     }
 }

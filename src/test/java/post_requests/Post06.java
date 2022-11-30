@@ -60,9 +60,14 @@ public class Post06 extends GMIBankBaseUrl {
         System.out.println("expectedData = " + expectedData);
 
         //Send the request and get the response
-        Response response = given().spec(spec).contentType(ContentType.JSON).
+        Response response = given().
+                spec(spec).
+                contentType(ContentType.JSON).
                 headers("Authorization","Bearer "+generateToken()).
-                body(expectedData).when().post("/{first}");
+                body(expectedData).
+                when().
+                post("/{first}");
+
         response.prettyPrint();
 
         //Do assertion

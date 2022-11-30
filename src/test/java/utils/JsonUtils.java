@@ -8,19 +8,18 @@ public class JsonUtils {
 
     protected static ObjectMapper mapper;
 
-    static {// static block works before every process and this object will be create once and used every classes.
+    static {//static block works before every process and this object will be created once and used every classes.
         mapper = new ObjectMapper();
     }
-
-    // This method will accept two parameters and convert first parameter to second parameter data type by using ObjectMapper class.
-    public static <T> T convertJsonToJavaObject(String json, Class<T> cls){// Generic method
-
+    //This method will accept two parameters and convert first parameter to second parameter data type by using ObjectMapper class.
+    public static <T> T convertJsonToJavaObject(String json, Class<T> cls) {//Generic Method
         T javaResult = null;
         try {
-           javaResult =  mapper.readValue(json, cls);
+            javaResult =   mapper.readValue(json,cls);
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return javaResult;
+
+        return  javaResult;
     }
 }
