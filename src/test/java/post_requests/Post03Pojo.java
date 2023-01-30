@@ -6,8 +6,6 @@ import io.restassured.response.Response;
 import org.junit.Test;
 import pojos.JsonPlaceHolderPojo;
 
-import javax.swing.text.AbstractDocument;
-
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
 
