@@ -13,6 +13,7 @@ public class AuthenticationGMIBank {
         System.out.println(generateToken());
     }
 
+
     public static String generateToken(){
         Map<String,Object> map = new HashMap<>();
         map.put("password","John.123");
