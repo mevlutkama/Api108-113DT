@@ -4,8 +4,10 @@ import base_urls.PetStoreApiBaseUrl;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.junit.Test;
+import utils.JsonUtils;
 
-import java.util.ArrayList;
+
+import java.util.HashMap;
 import java.util.List;
 
 import static io.restassured.RestAssured.given;
@@ -43,14 +45,11 @@ public class GetPetStore extends PetStoreApiBaseUrl {
         System.out.println("idList = " + idList);
         
         // Get the photoUrls from the pet with name ‘80e2c334-96bf-4522-ac66-a4079d73d8b0’
+        String nameList = json.getString("name");
+        System.out.println("nameList = " + nameList);
 
 
-        List<String> nameList = json.getList("name");
 
-        for(String w : nameList){
-            if (w.equals("80e2c334-96bf-4522-ac66-a4079d73d8b0")){
-                System.out.println(w);
-            }
         }
     }
-}
+
