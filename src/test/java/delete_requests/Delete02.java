@@ -4,7 +4,6 @@ import base_urls.HerOkuAppBaseUrl;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.junit.Test;
-import utils.AuthenticationHerOkuApp;
 
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
