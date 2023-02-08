@@ -10,6 +10,7 @@ import static org.junit.Assert.assertEquals;
 import static utils.AuthenticationHerOkuApp.generateToken;
 
 public class Delete02 extends HerOkuAppBaseUrl {
+
     /*
         Given
             https://restful-booker.herokuapp.com/booking/{bookingId}
