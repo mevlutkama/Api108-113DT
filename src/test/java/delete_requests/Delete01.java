@@ -23,6 +23,7 @@ public class Delete01 extends JsonPlaceHolderBaseUrl {
 		 	Status code is 200
 		 	And Response body is { }
      */
+
     @Test
     public void delete01(){
 
