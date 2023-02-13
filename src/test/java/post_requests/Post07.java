@@ -85,6 +85,5 @@ public class Post07 extends HerOkuAppBaseUrl {
         assertEquals(expectedData.get("depositpaid"), ((Map)actualData.get("booking")).get("depositpaid"));
         assertEquals(expectedBookingdates.get("checkin"), ((Map) ((Map)actualData.get("booking")).get("bookingdates")).get("checkin"));
         assertEquals(expectedBookingdates.get("checkout"), ((Map) ((Map)actualData.get("booking")).get("bookingdates")).get("checkout"));
-
     }
 }
