@@ -15,6 +15,7 @@ import static org.junit.Assert.assertEquals;
 import static utils.AuthenticationGMIBank.generateToken;
 
 public class Post06 extends GMIBankBaseUrl {
+
     /*
       Given
          https://www.gmibank.com/api/tp-countries
