@@ -11,6 +11,7 @@ import static org.junit.Assert.assertEquals;
 import static utils.AuthenticationHerOkuApp.generateToken;
 
 public class S4Delete extends HerOkuAppBaseUrl {
+
     /*
     Given
         https://restful-booker.herokuapp.com/booking/:id
