@@ -25,6 +25,7 @@ public class S4Delete extends HerOkuAppBaseUrl {
 
     @Test
     public void delete01(){
+
         // Set the Url
         spec.pathParams("first", "booking", "second", bookingid);
 
