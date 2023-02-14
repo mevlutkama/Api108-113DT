@@ -14,6 +14,7 @@ import static org.hamcrest.Matchers.equalTo;
 import static org.junit.Assert.assertEquals;
 
 public class Patch01 extends JsonPlaceHolderBaseUrl {
+
     /*
             Given
                 1) https://jsonplaceholder.typicode.com/todos/198
