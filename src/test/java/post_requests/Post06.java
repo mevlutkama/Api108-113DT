@@ -7,7 +7,6 @@ import org.junit.Test;
 import pojos.CountryPost;
 import pojos.States;
 import utils.JsonUtils;
-
 import java.util.ArrayList;
 
 import static io.restassured.RestAssured.given;
