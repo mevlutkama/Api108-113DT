@@ -6,7 +6,6 @@ import org.junit.Before;
 public class DummyApiBaseUrl {
 
     protected RequestSpecification spec;
-
     @Before// If you use @Before annotation at the top of the method, it will work just before every test method.
     public void setUp() {
 
