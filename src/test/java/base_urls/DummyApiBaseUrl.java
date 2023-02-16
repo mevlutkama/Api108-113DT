@@ -12,5 +12,4 @@ public class DummyApiBaseUrl {
         spec = new RequestSpecBuilder().setBaseUri("https://dummy.restapiexample.com/api/v1/").build();
 
     }
-
 }
