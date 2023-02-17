@@ -37,6 +37,7 @@ public class Put02 extends DummyApiBaseUrl {
                         "message": "Successfully! Record has been added."
                     }
      */
+
     /*
     Given
         https://dummy.restapiexample.com/api/v1/update/21
