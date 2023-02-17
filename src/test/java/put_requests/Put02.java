@@ -67,6 +67,7 @@ public class Put02 extends DummyApiBaseUrl {
         */
     @Test
     public void put02(){
+
         // Set the Url
         spec.pathParams("first", "update", "second", 21);
 
